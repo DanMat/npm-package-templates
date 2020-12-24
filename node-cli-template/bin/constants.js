@@ -1,1 +1,3 @@
-export const VERBIAGE = 'Created using create-deploy-node-packages';
+module.exports = {
+    VERBIAGE: 'Created using create-deploy-node-packages'
+}

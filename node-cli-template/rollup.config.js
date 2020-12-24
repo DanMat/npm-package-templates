@@ -1,7 +1,8 @@
 import babel from '@rollup/plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+
 import { terser } from 'rollup-plugin-terser';
-import commonjs from 'rollup-plugin-commonjs';
 import visualizer from 'rollup-plugin-visualizer';
 
 const resolvePlugin = resolve({
@@ -28,7 +29,10 @@ export default [
 		output: {
 			file: 'dist/cjs.js',
 			format: 'cjs',
-			sourcemap: true
+			sourcemap: true,
+			strict: false,
+			banner: '#! /usr/bin/env node\n',
+			exports: 'named'
 		},
 		plugins: [
 			resolvePlugin,
@@ -38,6 +42,19 @@ export default [
 			visualizer({
 				filename: 'dist/bundle-visualizer-cjs.html'
 			})
+		],
+		external: [
+			'child_process',
+			'fs',
+			'path',
+			'os',
+			'https',
+			'readline',
+			'zlib',
+			'events',
+			'stream',
+			'util',
+			'buffer'
 		]
 	}
 ];

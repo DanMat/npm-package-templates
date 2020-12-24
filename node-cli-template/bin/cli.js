@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { VERBIAGE } from './constants';
+const { VERBIAGE } = require('./constants')
 
 const runCLI = async () => {
 	console.log(VERBIAGE)
