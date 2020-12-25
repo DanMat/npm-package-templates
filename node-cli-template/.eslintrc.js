@@ -58,7 +58,7 @@ module.exports = {
 		'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
 		// Prevent logs but allow info, error and warning.
-		'no-console': [2, { allow: ['info', 'warn', 'error'] }]
+		'no-console': ['off']
 	},
 	env: {
 		browser: true,

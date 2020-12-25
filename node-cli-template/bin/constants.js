@@ -1,3 +1,3 @@
 module.exports = {
-    VERBIAGE: 'Created using create-deploy-node-packages'
-}
+	VERBIAGE: 'Thanks for using create-deploy-node-packages 😊'
+};

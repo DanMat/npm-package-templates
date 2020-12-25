@@ -13,6 +13,9 @@
     "pretty": "./node_modules/.bin/prettier --write \"**/*.js\"",
     "clean": "rm -rf dist/*"
   },
+  "files": [
+    "dist/umd.js"
+  ],
   "lint-staged": {
     "src/**/*.{js,json}": [
       "npm run pretty",
