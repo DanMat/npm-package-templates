@@ -43,6 +43,15 @@ export default [
 				filename: 'dist/bundle-visualizer-cjs.html'
 			})
 		],
+		/**
+		 * In case of the following warning
+		 *
+		 * Plugin node-resolve: Could not resolve import ... in ... is not defined by "exports" in undefined
+		 * Plugin node-resolve: Could not resolve import "undefined" in ".". Package subpath ... is not defined by "exports" in undefined
+		 * Unresolved dependencies
+		 *
+		 * Add the external package to this list.
+		 */
 		external: [
 			'child_process',
 			'fs',
@@ -54,7 +63,8 @@ export default [
 			'events',
 			'stream',
 			'util',
-			'buffer'
+			'buffer',
+			'yargs'
 		]
 	}
 ];
