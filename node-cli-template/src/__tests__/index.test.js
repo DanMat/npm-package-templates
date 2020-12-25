@@ -1,8 +1,8 @@
 import path from 'path';
 import { promisify } from 'util';
 import { exec } from 'child_process';
-
 import { VERBIAGE } from '../constants';
+
 const promisifyExec = promisify(exec);
 
 const cli = args =>
