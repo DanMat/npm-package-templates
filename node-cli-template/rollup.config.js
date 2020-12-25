@@ -27,7 +27,7 @@ export default [
 	{
 		input: 'bin/cli.js',
 		output: {
-			file: 'dist/cjs.js',
+			file: 'dist/bundle.cjs.js',
 			format: 'cjs',
 			sourcemap: true,
 			strict: false,

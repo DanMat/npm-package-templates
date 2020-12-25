@@ -27,7 +27,7 @@ export default [
 	{
 		input: 'src/index.js',
 		output: {
-			file: 'dist/umd.js',
+			file: 'dist/bundle.umd.js',
 			format: 'umd',
 			// Enter a global variable name that will be used for this library. 
 			// If, used in the browser (ie, MyAwesomeLib in window.MyAwesomeLib)
@@ -57,7 +57,7 @@ export default [
 		{
 			input: 'src/index.js',
 			output: {
-				file: 'dist/esm.js',
+				file: 'dist/bundle.esm.js',
 				format: 'es',
 				globals,
 				sourcemap: true
